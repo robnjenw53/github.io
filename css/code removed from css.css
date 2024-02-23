@@ -1,0 +1,118 @@
+*Style rule applies to table on projects page*/
+table {
+	background-color: yellow;
+	border: 2px solid black;
+	margin: 0 auto;
+	width: 100%
+	}
+td, th  {
+	border: 2px solid navy;
+	padding: 1px;
+	}
+th {
+	background-color: orange;
+}
+caption {
+	font-size: 2em;
+	font-weight: bold;
+	padding: 0%;
+}
+
+/*Style rules for main area */
+main {
+	background-color: #fff;
+	padding: 2%;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 30px;
+}
+
+.grid-item1 {
+	grid-column: 1 / span 3;
+	box-shadow: 20px 20px 30px #000;
+}
+
+.frame {
+	position: relative;
+	max-width: 500px;
+	margin: 1% auto;
+}
+
+.pic-text {
+	position: absolute;
+	bottom: 0;
+	color: white;
+	width: 90%;
+	padding: 20px;
+	text-align: center;
+	font-family: 'Crimson Pro', serif;
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
+
+/*mobile viewport Style rule applies to table on projects page*/
+table {
+	background-color: yellow;
+	border: 1px solid black;
+	margin: 0 auto;
+	width: 100%
+	}
+td, th  {
+	border: 2px solid navy;
+	padding: 1px;
+	}
+th {
+	background-color: orange;
+}
+caption {
+	font-size: 2em;
+	font-weight: bold;
+	padding: 0%;
+}
+
+/*removed from ammortization area but it didnt change anything*/
+
+caption {
+	font-size: 2em;
+	font-weight: bold;
+	padding: 0%;
+}
+
+/*this was a repeat already in css*/
+/*Style rules for main area */
+main {
+	background-color: #fff;
+	padding: 2%;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+
+
+/*these were near the header*/
+
+.grid {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-gap: 30px;
+}
+
+.grid-item1 {
+	grid-column: 1 / span 3;
+	box-shadow: 20px 20px 30px #000;
+}
+
+/* The following was removed from footer p CSS validator did not like it */
+footer p {
+
+
+
+nav li:first-child {
+	border-top: none;
+}

@@ -1,0 +1,15 @@
+
+<!--Use this to outline everything on a page_-->
+
+* {
+    outline: 1px red dashed;
+}
+
+
+    width: 100%;
+	padding-top: 4%;
+	
+	
+* {
+    box-sizing: border-box;
+}
