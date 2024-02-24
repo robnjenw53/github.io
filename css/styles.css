@@ -1,0 +1,260 @@
+/* created by: Robert Wright, Wilmington University, CSC 489, 18 Jan 2024 */
+/* css.stylesheet */
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, h2, h3, h4, div, img, ul, figure, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+body {
+    background-color: #004d00;
+}
+
+/* Style rules for header */
+header {
+    top: 0;
+    background-color: #00bfff;
+    height: 270px;
+    width: 100%;
+}
+
+/* Styele rules for header image */
+header img {
+    margin: 0 auto;
+    height: auto;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    padding: 1%;
+}
+
+/* Style rules for navigation area */
+/* padding and height */
+nav {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+/* center nav buttons */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* style each nav link */
+nav li {
+    font-size: 1.75em;
+    font-family: "Times New Roman", Times, serif;
+    border-top: 1px solid #fff;
+}
+
+/* set nav border area */
+nav li:first-child {
+    border-top: none;
+}
+
+/*Color and underline nav buttons*/
+nav li a {
+    display: block;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    text-decoration: underline;
+}
+
+/* Style rules for mobile viewport */
+/*Show mobile class and hide tablet-desktop class*/
+@media screen and (min-width: 280px) {
+    .mobile {
+        display: block;
+    }
+
+    /* Change font color and highlight nav button when hovering */
+    nav li a:hover {
+        color: #ff0000;
+        background-color: #ffff00;
+    }
+	
+	/* size header image */
+	/*max-width is less than desktops 500 to make header picture adjust to smaller screens */
+.frame {
+    position: relative;
+    max-width: 400px;
+    margin: 1% auto;
+}
+
+/* text of header image */
+.pic-text {
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+    /*Style rules for main area */
+    main {
+        background-color: #fff;
+        padding: 2%;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    /* round the corners of header image */
+    .round {
+        border-radius: 28px;
+    }
+
+    /* Style rules for footer - lowered font size for small viewports*/
+    footer p {
+        font-size: 1em;
+        text-align: center;
+        color: #fff;
+        padding: 0 0;
+        margin: 1em 2em;
+    }
+
+    /*color footer email address */
+    footer p a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Highlight fact that calculators are for estimates only */
+    footer p strong {
+        color: yellow;
+    }
+
+    /*Style rule applies to ammortization schedule, border-collapse removes space between cells in table*/
+    table {
+        background-color: #ffffff;
+        margin: 0 auto;
+        width: 100%;
+        border-collapse: collapse;
+
+    }
+
+    td, th {
+        border: 2px solid navy;
+        padding: 1px;
+    }
+
+    th {
+        background-color: orange;
+    }
+
+}
+
+
+
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1015px) {
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    /* Desktop Viewport Style rules for header */
+    header {
+        position: static;
+        padding-bottom: 2%;
+        width: 100%;
+    }
+
+    /* Desktop Viewport Style rules for nav area - set nav links to horizontal and vertical bar width */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #fff;
+    }
+
+    nav li:last-child {
+        border-right: none;
+    }
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }
+
+    /*Style rule applies to ammortization schedule*/
+    table {
+        background-color: white;
+        border: 2px solid black;
+        margin: 0 auto;
+        width: 100%
+    }
+
+    td,
+    th {
+        border: 2px solid navy;
+        padding: 1px;
+    }
+
+    th {
+        background-color: orange;
+    }
+	
+	/* size header image */
+.frame {
+    position: relative;
+    max-width: 500px;
+    margin: 1% auto;
+}
+
+/* text of header image */
+.pic-text {
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+ /* Style rules for footer */
+    footer p {
+        font-size: 1.25em;
+        text-align: center;
+        color: #fff;
+        padding: 0 0;
+        margin: 1em 2em;
+    }
+
+}
+
+/*Style Help Desk Main Area*/
+form {
+    padding: 1%;
+    font-size: 1em;
+}
+
+/* Set font size for all elements marked <h1> */
+h1 {
+    font-size: 45px;
+}
+
+/*Style calculate and send message button*/
+button {
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+}
+
+/*create shadow around calculate and send message buttons when hovered over*/
+button:hover {
+    box-shadow: 8px 8px 8px #808080;
+}
