@@ -1,0 +1,318 @@
+/* created by: Robert Wright, Wilmington University, CSC 489, 26 Feb 2024 */
+/* css.stylesheet */
+
+/* Styles that apply to everything - mobile view and desktop view
+ specific rules are further down the page */
+ /*/\/\/\/\General Section\/\/\/\/\/\*/
+
+/* CSS Reset */
+	body, header, nav, main, footer, h1, h2, h3, h4, div, img, ul, figure, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rules for body and images */
+	body {
+    background-color: #004d00;
+	
+	/* This is a green gradient - not sure if I like this
+	background: linear-gradient(to bottom right, #008000, #004d00, darkgreen);
+	*/
+}
+
+/* On each page, this shades in a numerical field that requires an input */
+	input[type="number"]:required {background-color: #ffffe0;}
+
+/* Shades in email input field to show its required */
+	input[type="email"]:required {background-color: #ffffe0;}
+
+/* Style rules for header */
+	header {
+		
+	/* This is solid sky blue */	
+   /* top: 0;
+    background-color: #00bfff;
+    height: 270px;
+    width: 100%;
+	padding-bottom: 2%; */
+	
+	/* This code creates a blue gradient I think I like better */
+	/* The linear-gradient code came from “Responsive Web Design with HTML5 and CSS3” (2012) page 187 */
+	background: linear-gradient(to bottom right, #00BFFF, #87CEEB 35%, #1E90FF);
+    height: 270px;
+    width: 100%;
+	padding-bottom: 2%;
+}
+
+/* Style rules for header image */
+	header img {
+	/* position: relative; */
+    /* right: 200px; */
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    padding: 1%;
+}
+
+	/* size header image */
+	.frame {
+    position: relative;
+    max-width: 500px;
+    margin: 1% auto;
+}
+
+/* text of header image */
+	.pic-text {
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    font-family: "Times New Roman", Times, sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Style rules for navigation area */
+/* padding and height */
+	nav {
+    padding: 1%;
+    margin-bottom: 1%;
+	text-align: center;
+	/* throw a border around an element */
+}
+
+/* style each nav link */
+	nav li {
+    font-size: 1.75em;
+    font-family: "Times New Roman", Times, serif;
+    border-top: 1px solid #fff;
+}
+
+/*Color and underline nav buttons*/
+	nav li a {
+    display: block;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    text-decoration: underline;
+	/* Changes color of link underline - not sure if I like this
+	text-decoration-color: #568203; */	
+}
+	
+    /*Style rule applies to ammortization schedule, border-collapse removes space between cells in table*/
+	table {
+        background-color: #ffffff;
+        margin: 0 auto;
+        width: 100%;
+        border-collapse: collapse;
+}
+	/* Draws black border around each cell in table */
+	td, th {
+        border: 2px solid black;
+        padding: 1px;
+}
+	
+	/* Sets color of amortization table header */
+	th {
+        background-color: orange;
+}
+
+/* When amortization table renders this colors in every other line, this will do the same to future tables if added */
+	tr:nth-child(even) {
+    background-color: #e5e4e2;
+}
+
+/* Place black border around main area */
+	main {
+		border: 3px solid black;
+}
+
+/*Style Help Desk Main Area*/
+	form {
+    padding: 1%;
+    font-size: 1em;
+}
+
+/* Set font size for all elements marked <h1> */
+	h1 {
+    font-size: 45px;
+}
+
+/*Style calculate and send message button*/
+	button {
+    border-radius: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+}
+
+/*create shadow around calculate and send message buttons when hovered over*/
+	button:hover {
+    box-shadow: 8px 8px 8px #808080;
+}
+
+/* Style rules for mobile viewport */
+/*/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/*/
+/*Show mobile class and hide tablet-desktop class*/
+@media screen and (min-width: 280px) {
+    .mobile {
+        display: block;
+    }
+	
+	/* Adjust header image width for smaller screens */
+	header img {
+    margin: 0 auto;
+    width: 100vw;
+    height: auto;
+    display: block;
+    padding: 1%;
+}	
+	
+    /* Change font color and highlight nav button when hovering */
+	nav li a:hover {
+        color: #ff0000;
+        background-color: #ffff00;
+    }
+	
+	/* In mobile view, remove horizontal line (border) from first link */
+	/* Using Pseudo class in case i add or reorganize links */
+	nav li:first-child {
+    border-top: none;
+} 
+
+    /* round the corners of header image */
+    .round {
+        border-radius: 28px;
+    }
+	
+	   /*Style rules for main area - adjusted font size down from desktop view
+		so calculators would line up in mobile view*/
+	main {
+        background-color: #fff;
+        padding: 2%;
+        font-size: .9em;
+        text-align: center;
+	}
+	
+	/*Adjust calcultor header to fit better on mobile view */	
+	main h1 {
+		font-size: 1.8em;
+	}
+		
+
+    /* Style rules for footer - lowered font size for small viewports*/
+    footer p {
+        font-size: 1em;
+        text-align: center;
+        color: #fff;
+        padding: 0 0;
+        margin: 1em 2em;
+    }
+
+    /*color footer email address */
+    footer p a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* Highlight fact that calculators are for estimates only */
+    footer p strong {
+        color: yellow;
+    }
+
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 768px) {	
+.tablet-desktop {
+	display: block;
+	}
+			
+.mobile {
+	display: none;
+	}
+	
+	/* Adjust header image width for tablet viewport */
+	header img {
+    margin: 0 auto;
+    width: 40vw;
+    height: auto;
+    display: block;
+    padding: 1%;
+}
+	
+/* Media Query for Desktop Viewport */
+/*/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/*/
+@media screen and (min-width: 1015px) {
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }   
+
+	/* Adjust header image width for desktops */
+	header img {
+    margin: 0 auto;
+    width: 25vw;
+    height: auto;
+    display: block;
+    padding: 1%;
+}	
+
+    /* Desktop Viewport Style rules for nav area - set nav links to horizontal and vertical bar width */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #fff;
+    }
+
+    nav li a {
+        padding: 0.1em 0.75em;
+    }	
+
+	/* Remove vertical line (Border) from last navigation link */
+	/* Using Pseudo class in case I add or reorganize links */
+	nav li:last-child {
+        border-right: none;
+    }
+	
+		   /*Style rules for main area */
+	main {
+        background-color: #fff;
+        padding: 2%;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    /*Style rule applies to ammortization schedule*/
+    table {
+        background-color: white;
+        border: 2px solid black;
+        margin: 0 auto;
+        width: 100%
+    }
+
+    td, th {
+        border: 2px solid black;
+        padding: 1px;
+    }
+
+    th {
+        background-color: orange;
+    }
+
+ /* Style rules for footer */
+    footer p {
+        font-size: 1.25em;
+        text-align: center;
+        color: #fff;
+        padding: 0 0;
+        margin: 1em 2em;
+    }
+
+}
